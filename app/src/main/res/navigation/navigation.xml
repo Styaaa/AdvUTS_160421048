@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.satya.anmp_uts_hobbyapp_160421048.View.LoginFragment"
+        android:label="Sign In"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/actionRegist"
+            app:destination="@id/registFragment" />
+        <action
+            android:id="@+id/actionHome"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registFragment"
+        android:name="com.satya.anmp_uts_hobbyapp_160421048.View.RegistFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_regist">
+        <action
+            android:id="@+id/actionLogin"
+            app:destination="@id/itemHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.satya.anmp_uts_hobbyapp_160421048.View.HomeFragment"
+        android:label="Hobby Apps"
+        tools:layout="@layout/fragment_home">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_DetailFragment"
+            app:destination="@id/detailBeritaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemHistory"
+        android:name="com.satya.anmp_uts_hobbyapp_160421048.View.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.satya.anmp_uts_hobbyapp_160421048.View.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/actionLogout"
+            app:destination="@id/itemHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailBeritaFragment"
+        android:name="com.satya.anmp_uts_hobbyapp_160421048.View.DetailBeritaFragment"
+        android:label="fragment_detail_berita"
+        tools:layout="@layout/fragment_detail_berita" >
+        <argument
+            android:name="berita_id"
+            app:argType="integer" />
+    </fragment>
+</navigation>
