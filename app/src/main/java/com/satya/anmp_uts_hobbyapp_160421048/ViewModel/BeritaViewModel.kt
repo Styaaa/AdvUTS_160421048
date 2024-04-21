@@ -25,7 +25,7 @@ class BeritaViewModel(application: Application): AndroidViewModel(application) {
     fun fetchBerita() {
 
         queue = Volley.newRequestQueue(getApplication())
-        val url = "http://192.168.101.43/hobbyapps/fetchBerita.php"
+        val url = "http://192.168.119.43/hobbyapps/fetchBerita.php"
 
         val stringRequest = StringRequest(
             Request.Method.GET, url,
@@ -53,7 +53,7 @@ class BeritaViewModel(application: Application): AndroidViewModel(application) {
 
     fun fetchBeritaById(id: Int){
         queue = Volley.newRequestQueue(getApplication())
-        val url = "http://192.168.101.43/hobbyapps/fetchBeritaById.php"
+        val url = "http://192.168.119.43/hobbyapps/fetchBeritaById.php"
 
         val stringRequest = object : StringRequest(
             Request.Method.POST, url,

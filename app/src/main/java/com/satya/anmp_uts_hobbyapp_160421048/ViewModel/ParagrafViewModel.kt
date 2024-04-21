@@ -23,7 +23,7 @@ class ParagrafViewModel(application: Application): AndroidViewModel(application)
 
     fun fetchParagraf(id: Int){
         queue = Volley.newRequestQueue(getApplication())
-        val url = "http://192.168.101.43/hobbyapps/fetchParagraf.php"
+        val url = "http://192.168.119.43/hobbyapps/fetchParagraf.php"
 
         val stringRequest = object : StringRequest(
             Request.Method.POST, url,

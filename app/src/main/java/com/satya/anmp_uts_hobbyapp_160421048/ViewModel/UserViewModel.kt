@@ -29,7 +29,7 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
 
     fun signUpRequest(username: String, password: String, fname: String, lname: String, email: String, activity: Context){
         queue = Volley.newRequestQueue(getApplication())
-        val url = "http://192.168.101.43/hobbyapps/signup.php"
+        val url = "http://192.168.119.43/hobbyapps/signup.php"
 
         val stringRequest = object : StringRequest(
             Request.Method.POST, url,
@@ -68,7 +68,7 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
 
     fun signInRequest(username: String, password: String, view: View){
         queue = Volley.newRequestQueue(getApplication())
-        val url = "http://192.168.101.43/hobbyapps/signin.php"
+        val url = "http://192.168.119.43/hobbyapps/signin.php"
 
         val stringRequest = object : StringRequest(
             Request.Method.POST, url,
@@ -87,7 +87,7 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
                     val action = LoginFragmentDirections.actionHome(result.id.toString())
                     Navigation.findNavController(view).navigate(action)
 
-                    Toast.makeText(getApplication(), usersLD.value.toString(), Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(getApplication(), usersLD.value.toString(), Toast.LENGTH_SHORT).show()
 
                     Log.d("showvoley", data.toString())
 
@@ -112,7 +112,7 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
 
     fun fetchUser(id: String){
         queue = Volley.newRequestQueue(getApplication())
-        val url = "http://192.168.101.43/hobbyapps/fetchUser.php"
+        val url = "http://192.168.119.43/hobbyapps/fetchUser.php"
 
         val stringRequest = object : StringRequest(
             Request.Method.POST, url,
@@ -152,7 +152,7 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
 
     fun updateUser(password: String, fname: String, lname: String, email: String, id: String){
         queue = Volley.newRequestQueue(getApplication())
-        val url = "http://192.168.101.43/hobbyapps/updateUser.php"
+        val url = "http://192.168.119.43/hobbyapps/updateUser.php"
 
         val stringRequest = object : StringRequest(
             Request.Method.POST, url,
