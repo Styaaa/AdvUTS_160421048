@@ -76,7 +76,7 @@ class ProfileFragment : Fragment() {
         viewModel.usersLD.observe(viewLifecycleOwner, Observer {
 
             binding.txtUsername.setText(viewModel.usersLD.value?.username)
-            binding.txtFName.setText(viewModel.usersLD.value?.nama_belakang)
+            binding.txtFName.setText(viewModel.usersLD.value?.nama_depan)
             binding.txtLName.setText(viewModel.usersLD.value?.nama_belakang)
             binding.txtEmail.setText(viewModel.usersLD.value?.email)
             binding.txtPasssword.setText(viewModel.usersLD.value?.password)
